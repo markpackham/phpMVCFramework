@@ -1,6 +1,6 @@
 <?php
 
-class Pages
+class Pages extends Controller
 {
     public function __construct()
     {
@@ -10,12 +10,12 @@ class Pages
     public function index()
     {
         // http://localhost/phpMVCFramework/pages
-        echo "Homepage";
+        $this->view("pages/index");
     }
 
     public function about()
     {
         // http://localhost/phpMVCFramework/pages/about
-        echo "About";
+        $this->view("pages/about");
     }
 }
