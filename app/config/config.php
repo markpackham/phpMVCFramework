@@ -1,10 +1,10 @@
 <?php
 
 // Databse params
-define("DB_HOST", "");
-define("DB_USER", "");
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
 define("DB_PASS", "");
-define("DB_NAME", "");
+define("DB_NAME", "phpmvcframework");
 
 // shows something like
 //C:\xampp\htdocs\phpMVCFramework\app\config\config.php
