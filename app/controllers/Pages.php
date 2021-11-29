@@ -9,8 +9,12 @@ class Pages extends Controller
 
     public function index()
     {
+        $data = [
+            "title" => "Home page",
+            "name" => "Mark"
+        ];
         // http://localhost/phpMVCFramework/pages
-        $this->view("pages/index");
+        $this->view("pages/index", $data);
     }
 
     public function about()

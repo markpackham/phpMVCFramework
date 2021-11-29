@@ -1,3 +1,5 @@
 <?php
 
-echo "MVC working";
+echo $data["title"];
+echo " - ";
+echo $data["name"];
