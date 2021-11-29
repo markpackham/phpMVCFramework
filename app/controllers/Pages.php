@@ -6,4 +6,16 @@ class Pages
     {
         // echo "Loaded";
     }
+
+    public function index()
+    {
+        // http://localhost/phpMVCFramework/pages
+        echo "Homepage";
+    }
+
+    public function about()
+    {
+        // http://localhost/phpMVCFramework/pages/about
+        echo "About";
+    }
 }
