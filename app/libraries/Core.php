@@ -11,6 +11,19 @@ class Core
     public function __construct()
     {
         // print_r($this->getUrl());
+        $url = $this->getUrl();
+
+        // look in controllers for first value (remember we access stuff first via the public folder so need "../app")
+        // ucwords, uppercase the first character of each word in a string
+        if (file_exists("../app/controllers/" . ucwords($url[0]) . ".php")) {
+            // will set a new controller
+            $this->currentController = ucwords($url[0]);
+            unset($url[0]);
+        }
+
+        // Require the controller
+        require_once "../app/controllers/" . $this->currentController . '.php';
+        $this->currentController = new $this->currentController;
     }
 
     public function getUrl()
