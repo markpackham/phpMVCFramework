@@ -56,4 +56,24 @@ class Database
     {
         return $this->statement->execute();
     }
+
+    // Return an array
+    public function resultSet()
+    {
+        $this->execute();
+        return $this->statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // Return a specific row as an object
+    public function single()
+    {
+        $this->execute();
+        return $this->statement->fetch(PDO::FETCH_OBJ);
+    }
+
+    // Get the row count (vital if we want to run an Update query)
+    public function rowCount()
+    {
+        return $this->statement->rowCount();
+    }
 }
