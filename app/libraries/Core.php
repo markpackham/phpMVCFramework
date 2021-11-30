@@ -15,10 +15,12 @@ class Core
 
         // look in controllers for first value (remember we access stuff first via the public folder so need "../app")
         // ucwords, uppercase the first character of each word in a string
-        if (file_exists("../app/controllers/" . ucwords($url[0]) . ".php")) {
-            // will set a new controller
-            $this->currentController = ucwords($url[0]);
-            unset($url[0]);
+        if (isset($url)) {
+            if (file_exists("../app/controllers/" . ucwords($url[0]) . ".php")) {
+                // will set a new controller
+                $this->currentController = ucwords($url[0]);
+                unset($url[0]);
+            }
         }
 
         // Require the controller
