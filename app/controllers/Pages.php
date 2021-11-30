@@ -4,7 +4,7 @@ class Pages extends Controller
 {
     public function __construct()
     {
-        // echo "Loaded";
+        $this->userModel = $this->model("User");
     }
 
     public function index()
