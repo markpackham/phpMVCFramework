@@ -6,5 +6,5 @@ echo $data["title"];
 // echo APPROOT;
 
 foreach ($data['users'] as $user) {
-    echo "<p>" . $user->user_name . " " . $user->user_email . "</p>";
+    echo "<p> {$user->user_name} {$user->user_email} </p>";
 }
