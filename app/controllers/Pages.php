@@ -9,9 +9,11 @@ class Pages extends Controller
 
     public function index()
     {
+        $users = $this->userModel->getUsers();
+
         $data = [
             "title" => "Home page",
-            "name" => "Mark"
+            'users' => $users,
         ];
         // http://localhost/phpMVCFramework/pages
         $this->view("pages/index", $data);
